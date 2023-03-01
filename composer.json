@@ -1,0 +1,26 @@
+{
+    "name": "onsite/tracker",
+    "description": "This is used for user onsite time tracking",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "OSHIT SD",
+            "email": "oshitsd99@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Onsite\\Tracker\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Onsite\\Tracker\\TimeTrackerServiceProvider"
+            ]
+        }
+    }
+}
