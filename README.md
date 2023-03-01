@@ -11,7 +11,7 @@ composer require onsite/tracker
 Next, run this command for publish assets
 
 ```console
-php artisan vendor:publish --tag=time-track-assets
+php artisan vendor:publish --tag=tracker-assets
 ```
 
 Migrate Database -

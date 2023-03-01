@@ -19,6 +19,6 @@ class TimeTrackerServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__ . '/public' => public_path('vendor/'),
-        ], 'time-track-assets');
+        ], 'tracker-assets');
     }
 }
