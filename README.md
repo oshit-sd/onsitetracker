@@ -1,4 +1,5 @@
 # OSHITSD/onsitetracker
+This is used for user onsite time tracking
 
 ## Installation
 
