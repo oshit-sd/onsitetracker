@@ -1,10 +1,10 @@
 <?php
 
-namespace Osd\TimeTrack;
+namespace Onsite\Tracker;
 
 use Illuminate\Support\ServiceProvider;
 
-class TimeTrackServiceProvider extends ServiceProvider
+class TimeTrackerServiceProvider extends ServiceProvider
 {
     public function register()
     {
