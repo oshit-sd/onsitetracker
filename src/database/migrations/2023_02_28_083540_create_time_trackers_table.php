@@ -17,7 +17,8 @@ class CreateTimeTrackersTable extends Migration
             $table->increments('id');
             $table->foreignId('user_id')->index()->nullable();
             $table->date('date');
-            $table->integer('seconds');
+            $table->integer('temp_seconds')->default(0);
+            $table->bigInteger('seconds')->nullable();
             $table->string('tos_session_key');
         });
     }
