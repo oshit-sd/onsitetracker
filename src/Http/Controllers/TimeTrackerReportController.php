@@ -42,6 +42,6 @@ class TimeTrackerReportController extends Controller
         $query->orderBy('times', 'desc');
 
         $data =  $query->paginate(50);
-        return view("tracker::report", compact('data', 'data'));
+        return view("tracker::report", compact('data'));
     }
 }
