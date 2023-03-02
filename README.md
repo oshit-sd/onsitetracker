@@ -1,6 +1,10 @@
 # OSHITSD/onsitetracker
 This is used for user onsite time tracking
 
+[![Latest Version](https://img.shields.io/github/release/guzzle/guzzle.svg?style=flat-square)](https://github.com/oshit-sd/onsitetracker/releases)
+[![Build Status](https://img.shields.io/github/workflow/status/guzzle/guzzle/CI?label=ci%20build&style=flat-square)](https://github.com/oshit-sd/onsitetracker/actions?query=workflow%3ACI)
+[![Total Downloads](https://img.shields.io/packagist/dt/guzzlehttp/guzzle.svg?style=flat-square)](https://packagist.org/packages/onsite/)
+
 ## Installation
 
 You can install the package in to a Laravel project that uses OnsiteTracker via composer:
