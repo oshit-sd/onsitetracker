@@ -22,6 +22,7 @@ class TimeTrackerServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__ . '/public' => public_path('vendor/'),
+            __DIR__ . '/Http/Controllers/TimeTrackerReportController.php' => app_path('Http/Controllers/TimeTrackerReportController.php'),
         ], 'tracker-assets');
     }
 }

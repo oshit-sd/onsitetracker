@@ -1,6 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Onsite\Tracker\Http\Controllers\TimeTrackerController;
+use Onsite\Tracker\Http\Controllers\TimeTrackerReportController;
 
-Route::get('timeTrack', [TimeTrackerController::class, 'index']);
+Route::get('timeTrack', [TimeTrackerReportController::class, 'index']);

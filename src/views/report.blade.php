@@ -50,12 +50,4 @@
     </div>
 </body>
 
-<script>
-    window.trackObj = {
-        track: true,
-        user_id: 2
-    }
-</script>
-<script src="{{ asset('vendor/onsitetracker/onsitetracker.min.js') }}"></script>
-
 </html>
