@@ -54,3 +54,9 @@ or you can use publicly
 </script>
 <script src="{{ asset('vendor/onsitetracker/onsitetracker.min.js') }}"></script>
 ```
+
+```
+Report URL
+http://localhost:8000/timeTrack
+
+```

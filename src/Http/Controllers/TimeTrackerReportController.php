@@ -25,7 +25,9 @@ class TimeTrackerReportController extends Controller
         $sDate = date("Y-m-d", strtotime($request->from_date));
         $eDate = date("Y-m-d", strtotime($request->end_date));
 
-        $query = TimeTracker::groupBy('user_id');
+        $query = TimeTracker::select('users.name', 'users.email')
+            ->leftJoin('users', 'time_trackers.user_id', '=', 'users.id')
+            ->groupBy('user_id');
 
         if (!empty($request->from_date) && !empty($request->end_date)) {
             $query->whereDate('date', '>=', $sDate)->whereDate('date', '<=', $eDate);

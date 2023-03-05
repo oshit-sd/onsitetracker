@@ -23,7 +23,6 @@
                             <tr>
                                 <th style="width:50px" class="text-center">SL</th>
                                 <th>Name</th>
-                                <th>Mobile No</th>
                                 <th>Email</th>
                                 <th class="text-center">Time</th>
                             </tr>
@@ -33,9 +32,8 @@
                             @foreach ($data as $key => $item)
                                 <tr>
                                     <td class="text-center">{{ $key + 1 }}</td>
-                                    <td>{{ $item->user->name ?? 'Unknown User' }}</td>
-                                    <td>{{ $item->user->mobile_no ?? '' }}</td>
-                                    <td>{{ $item->user->email ?? '' }}</td>
+                                    <td>{{ $item->name ?? 'Unknown User' }}</td>
+                                    <td>{{ $item->email ?? '' }}</td>
                                     <td class="text-center"><b>{{ $item->times }}</b></td>
                                 </tr>
                             @endforeach
