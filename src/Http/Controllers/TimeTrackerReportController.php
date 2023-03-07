@@ -16,24 +16,19 @@ class TimeTrackerReportController extends Controller
      */
     public function index(Request $request)
     {
-        $keyword = $request->keyword;
-        $field = $request->field;
-
         $start = Carbon::now()->startOfMonth()->format('Y-m-d');
         $end = Carbon::now()->endOfMonth()->format('Y-m-d');
 
-        $sDate = date("Y-m-d", strtotime($request->from_date));
-        $eDate = date("Y-m-d", strtotime($request->end_date));
+        if (!empty($request->from_date) && !empty($request->end_date)) {
+            $start = date("Y-m-d", strtotime($request->from_date));
+            $end = date("Y-m-d", strtotime($request->end_date));
+        }
 
         $query = TimeTracker::select('users.name', 'users.email')
             ->leftJoin('users', 'time_trackers.user_id', '=', 'users.id')
             ->groupBy('user_id');
 
-        if (!empty($request->from_date) && !empty($request->end_date)) {
-            $query->whereDate('date', '>=', $sDate)->whereDate('date', '<=', $eDate);
-        } else {
-            $query->whereDate('date', '>=', $start)->whereDate('date', '<=', $end);
-        }
+        $query->whereDate('date', '>=', $start)->whereDate('date', '<=', $end);
 
         $query->selectRaw("user_id, CONCAT(
                     FLOOR(TIME_FORMAT(SEC_TO_TIME(sum(seconds)), '%H') / 24), 'days - ',
